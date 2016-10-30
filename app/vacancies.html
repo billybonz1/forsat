@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Title</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <!-- Template Basic Images End -->
+
+    <!-- Header CSS (first screen styles from header.min.css) - inserted in the build of the project -->
+    <style>@@include('header.min.css')</style>
+
+    <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+    <script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)};function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n};function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+    <!-- Load Fonts CSS Start -->
+    <script>
+        loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
+        // loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
+    </script>
+    <!-- Load Fonts CSS End -->
+
+    <!-- Load Custom CSS Start -->
+    <!--<Deject>--><script>loadCSS( "header.min.css?ver=1.0.0", false, "all" );</script><!--</Deject>-->
+    <script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+    <!-- Load Custom CSS End -->
+
+    <!-- Load Custom CSS Compiled without JS Start -->
+    <noscript>
+        <link rel="stylesheet" href="css/fonts.min.css">
+        <link rel="stylesheet" href="css/main.min.css">
+    </noscript>
+    <!-- Load Custom CSS Compiled without JS End -->
+
+    <!-- Custom Browsers Color Start -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <!-- Custom Browsers Color End -->
+
+</head>
+
+<body>
+<header>
+    <div class="header-top">
+        <div class="inner">
+            <div class="logo inline-block">
+                <h1>
+                    ФОРСАТ
+                </h1>
+            </div>
+            <div class="header-top__list inline-block">
+                <ul>
+                    <li class="current"><a href="#">О КОМПАННИИ</a></li>
+                    <li><a href="#">ЦЕНЫ</a></li>
+                    <li><a href="#">ОБЪЕКТЫ</a></li>
+                    <li><a href="#">ФОТОГАЛЕРЕЯ</a></li>
+                    <li><a href="#">ВАКАНСИИ</a></li>
+                    <li><a href="#">НОВОСТИ</a></li>
+                    <li><a href="#">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+            <div class="header-top__number inline-block">
+                <a href="#">
+                    8 (111) 111-11-11<br>
+                    8 (111) 111-11-11
+                </a>
+                <div class="header-top__call">
+                    <a href="#">
+                        Заказать звонок
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-slider">
+        <ul id="header-slider" class="gallery content-slider list-unstyled clearfix">
+            <li>
+                <div class="header-slider__block">
+                    ФОРСАТ
+                    <span>промышленные полы</span>
+                </div>
+                <div class="header-slider__block2">
+                    <h1>
+                        Индивидуальный подход к каждому заказчику
+                    </h1>
+                </div>
+            </li>
+            <li>
+                <div class="header-slider__block">
+                    ФОРСАТ
+                    <span>промышленные полы</span>
+                </div>
+                <div class="header-slider__block2">
+                    <h1>
+                        Индивидуальный подход к каждому заказчику
+                    </h1>
+                </div>
+            </li>
+            <li>
+                <div class="header-slider__block">
+                    ФОРСАТ
+                    <span>промышленные полы</span>
+                </div>
+                <div class="header-slider__block2">
+                    <h1>
+                        Индивидуальный подход к каждому заказчику
+                    </h1>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<div class="shadow">
+
+</div>
+
+<div class="vacancies block-overall">
+    <div class="inner">
+        <div class="menu-overall inline-block">
+            <div class="menu-overall__types">
+                <div class="menu-overall__p">
+                    ТИПЫ ПОЛОВ
+                </div>
+                <ul>
+                    <li><a href="#">Бетонные полы</a></li>
+                    <li><a href="#">Наливные полы</a></li>
+                    <li><a href="#">Полимерные полы</a></li>
+                    <li><a href="#">Полимерцементные полы</a></li>
+                    <li><a href="#">Полиуретановые полы</a></li>
+                    <li><a href="#">Эпоксидные полы</a></li>
+                    <li><a href="#">Антистатические полы</a></li>
+                </ul>
+            </div>
+            <div class="menu-overall__types menu-overall__types2">
+                <div class="menu-overall__p menu-overall__p2">
+                    ТИПЫ ПОМЕЩЕНИЙ
+                </div>
+                <ul class="menu-overall__types__ul">
+                    <li><a href="#">Полы для автосервисов</a></li>
+                    <li><a href="#">Полы для гаражей</a></li>
+                    <li><a href="#">Полы для складских<br> помещений</a></li>
+                    <li><a href="#">Полы для химичекских<br> лабораторий</a></li>
+                    <li><a href="#">Полы для холодильный<br> камер</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="style-overall vacancies__block inline-block">
+            <h1>
+                Вакансии
+            </h1>
+            <p>
+                ФОРСАТ объявляет конкурс на замещение вакантных должностей.<br>
+                Ждем Ваше резюме на электронную почту <a href="#">pochta@rambler.ru</a>
+            </p>
+            <p>
+                Предварительное собеседование по телефону <a href="#">(495) 991-35-75</a>
+            </p>
+            <p class="p-vacancies">
+                СПИСОК АКТУАЛЬНЫХ ВАКАНСИЙ
+            </p>
+            <div class="vacancies__block__jobs">
+                Рабочие или бригады по укладке полимерных покрытий полов
+            </div>
+            <div class="vacancies__block__form">
+                <div class="vacancies__block__form__box">
+                    Образование: среднее, среднеспециальное<br>
+                    Возраст: 20-45 лет<br>
+                    Опыт работы: желателен<br>
+                    Проживание: предпочтение Москва или Московская область.<br>
+                    Для граждан Российской Федерации – обязательна регистрация в Москве<br>
+                    и самостоятельное проживание.<br>
+                    Заработная плата : по результатам собеседования, квалификации и качеству выполняемых работ.
+                </div>
+                <div class="vacancies__block__form__name inline-block">
+                    <input type="text" size="20" name="name" placeholder="Ваше имя">
+                    <input type="text" size="20" name="surname" placeholder="Телефон">
+                    <input type="text" size="20" name="email" placeholder="E-mail">
+                    <input type="file">
+                </div>
+                <div class="vacancies__block__form__comment inline-block">
+                    <textarea name="comment" cols="25" rows="6" placeholder="Комментарий"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slider">
+    <div class="slider-overall slider-about">
+        <div class="inner">
+            <div class="slider-overall__text inline-block">
+                Наши клиенты
+            </div>
+            <div class="slider-overall__border inline-block">
+
+            </div>
+            <div class="slider-overall__buttons inline-block">
+                <a href="" class="slider-overall__buttons__a-left">
+                    <i class="icon-arrow-left icon"></i>
+                </a>
+                <a href="" class="slider-overall__buttons__a-right">
+                    <i class="icon-arrow-right icon"></i>
+                </a>
+            </div>
+            <ul id="slider-overall" class="gallery content-slider list-unstyled clearfix ">
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="inner">
+        <div class="footer__item1 inline-block">
+            <h1>
+                ФОРСАТ
+            </h1>
+            <p class="p-thin">
+                ФОРСАТ занимается устройством наливных полов уже
+                четверть века, что говорит о богатом опыте и доверии
+                со стороны наших клиентов.
+            </p>
+            <p class="p-thin">
+                Телефон:<span>182 2569 5896</span><br>
+                e-mail:<span>info@forsat</span>
+            </p>
+        </div>
+        <div class="footer__item2 inline-block">
+            <p class="p-bold">Карта сайта</p>
+            <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Цены</a></li>
+                <li><a href="#">Объекты</a></li>
+                <li><a href="#">Фотогалерея</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer__item3 inline-block">
+            <p class="p-bold">последнее из <span>НОВОСТЕЙ</span></p>
+            <div class="footer__item3__content">
+                <div class="footer__item3__container">
+                    <div class="footer__item3__content__img inline-block">
+                        <img src="img/icons/img.png" alt="">
+                    </div>
+                    <div class="footer__item3__content__text inline-block">
+                        <a href="#">
+                            Отзыв от государственного космического<br>
+                            научно-производственного центра<br>
+                            <span>26 Мая, 2016</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__item3__container">
+                    <div class="footer__item3__content__img inline-block">
+                        <img src="img/icons/img.png" alt="">
+                    </div>
+                    <div class="footer__item3__content__text inline-block">
+                        <a href="#">
+                            Отзыв от государственного космического<br>
+                            научно-производственного центра<br>
+                            <span>26 Мая, 2016</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-line">
+        <div class="inner">
+            <p class="inline-block">
+                2016 Alex Kalinin|WebDesigner
+            </p>
+            <div class="footer-line__social inline-block">
+                <a href="#">
+                    <i class="icon-facebook icon"></i>
+                </a>
+                <a href="#">
+                    <i class="icon-google icon"></i>
+                </a>
+                <a href="#">
+                    <i class="icon-twitter icon"></i>
+                </a>
+                <a href="#">
+                    <i class="icon-rss icon"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--<div class="pxperfect">-->
+    <!--<img src="img/vacancies.png" alt="">-->
+<!--</div>-->
+
+
+
+
+
+<script>var scr = {"scripts":[
+    {"src" : "js/libs.min.js", "async" : false},
+    {"src" : "js/common.js", "async" : false}
+]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+</script>
+</body>
+</html>
