@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Title</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <!-- Template Basic Images End -->
+
+    <!-- Header CSS (first screen styles from header.min.css) - inserted in the build of the project -->
+    <style>.icon-facebook,.icon-google,.icon-pen,.icon-rss,.icon-twitter{background-repeat:no-repeat}.inner,body{margin:0 auto}.clearfix:after,.header-top__list ul:after{clear:both;content:""}.header-top__list,.header-top__number,.logo{vertical-align:middle}.header-slider .lSAction>a,.header-top__call a{background-color:#e2534b;border-bottom:3px solid #d72c23;-webkit-transition:.2s all;transition:.2s all;-webkit-border-radius:6px;border-radius:6px;color:#fff}.header-slider .lSAction>a:hover,.header-top__call:hover a{background-color:#e5645d;border-bottom-color:#e2534b}*{-webkit-box-sizing:border-box;box-sizing:border-box}.inner{max-width:1171px}h1,h2,p{margin:0}h1{font-size:36px;font-weight:700}h2,h3{font-weight:600}h2{font-size:40px}h3{font-size:30px}p{font-size:16px;font-weight:400}.p-bold{font-size:20px;font-weight:700}.p-thin{font-size:13px;font-weight:400;color:#fff;line-height:22px}.icon,.inline-block{display:inline-block}.icon-facebook{width:10px;height:22px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAWCAYAAAD5Jg1dAAAAhklEQVQ4T+2Syw2DQAxEnztICSmBDkhHtBAqIK3QQagEqGQir4hkFsQnErfMbe0ne2yvESTpBjTAA7jHnH0fE9QDDi8UwRdQrUEei+AbKDNwBIY9sDMz95q0VbE2s+d5UJJ7E1BkE7u35C+1luTQnsajYHcUbC+YOtw6v8yPe/xXzH74bI8fvVJsyx1pMOwAAAAASUVORK5CYII=)}.icon-google{width:22px;height:23px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAXCAYAAAAP6L+eAAAB3UlEQVRIS5VVbVXDQBCcUUBRQFEAVUBRQFEAVUBxAAooCgAF4ADqoDgoCqiD4U3eXt4luSRl//T19m52dvYjRMEknQO4AjAv+QG8kXzt8VXHzJ2SJgBeABwDWIfvAcAZgD2AJYAdye0QaAnYDyYkp+lhBNsBOAKwJTkbA20AS1oBeALwSNIsa5N0G5n4bDkmQxvYbJ1yCdgS/Uakjr+UQa2xJA09lJQCP5N0doOWA7s4vTpK+gJwAeCeZCosJLlzPgFckvSdZldIcvvcxPmsXflg7KJOSZpEZYcA+5HTrVgHgwogimeW80LAYcYB4MEwgFM26IcZxqDUWUSgkyBtv7vGGbstbT+NAcnSq1KOIO6UDcl6CjO9+wq4KQJnAczAzPxrxrW2B2tcCi3JstyFz7p7OBrjPFq8jIF1tsZJW/9PZsZuqxp8FDg2mkfau8CFcOEsgcHMPLViY1/EO/tXecBKY0kLAO8AvqOlSlrmsozuiwScpu6apJkWTZJ93tOj+4KZRgY7JZl6sQOeZfZv4Ma8t5Gz9dkZ+fZdM/ZKrBd5PsoFYC+ZPUnXZNCSxvkidxAvek9bJUtI4H72/UVpUDqMWxNkQPdw29wt60O+HOlh367Iv87u2077jUnxB/428zItc3FcAAAAAElFTkSuQmCC)}.icon-twitter{width:17px;height:22px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAWCAYAAAAmaHdCAAAA60lEQVQ4T+WUURHCMBBEdxWAA0AJ1AE4wAHgABwUBdQBSKAOkEAdFAVhtqRMyZD2Oh2+yGd797LZS5YA4JzbA9gAKAEcSGb6bl10zq0BnIKGhOS1D0TF86BBaqTOtKTkDyCaTtuEHiRvtWExTyyGCqIplkMg2mhHMh0KOZLcDoWsSF5ikALAvcOYrH4eP71s1VktI1JNTElOctEHkvoYCHvML1lKlgDOkV11a2MGS20VF/ShpMKJVX6j7nVPPKRNTRd7VkE86FvCdQH0P3lDGiAZPbJ0AyhITj8gHjQGIFU6YhibTXYOYKtIeALxdnVxEFUokwAAAABJRU5ErkJggg==)}.icon-rss{width:22px;height:21px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAVCAYAAABCIB6VAAABn0lEQVRIS51U7VECURBLKtAOlAqUCsQK1AqUCoQKhArECsQKhArUDiiBDrSDOGHu3azL3XG4f+7mfeTtJtmlpBmAJwA/ADYAtgA+AXyR9P+/ggG4CcAPLEm+HYt+CLjgOfPZMQ/0BS4PmKoxSX87g2VX0iWAUwD+PgC4aLlpLaYkl13INXA+JOm8esDCNoWpmbeBtwKHSvyAnXPfAPJCctIEXjh+TFZbk3TJdUgyPQsAJwnInO/R0iWeQebxgUoHWzCDD7Ogh1yxJ1QL+JbkIFZyCLicXZCcBt5Ny2uixNVZi11ku406rOYOHAfwMgrKkqsbFOoaXdFHKEn2vDsy8l1n3eVjX7RQuVGc1W44SbLVngMlNdedPq6ycvuehctvJM3xLiSZgpj1HclVnwYx7x9JqNpekuzh2Dy7prErXLIVvgWwqoZMbg5TchXAay4l+d572PMcHxk4X3LX+XDsunx5Q3JYUeHEvv94mKSBlcqE1/NaPhfPNGAMemVcZWYRo0OiO/LedeHYAtwAWLtB8gCqgD07PKtLTMp8kLS39wst0dKddWnySAAAAABJRU5ErkJggg==)}.icon-pen{width:16px;height:27px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAbCAYAAAB1NA+iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkVENDc3NTFBOUY0OTExRTZCOUJEQTZFOTNBMjc5ODIzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkVENDc3NTFCOUY0OTExRTZCOUJEQTZFOTNBMjc5ODIzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RUQ0Nzc1MTg5RjQ5MTFFNkI5QkRBNkU5M0EyNzk4MjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RUQ0Nzc1MTk5RjQ5MTFFNkI5QkRBNkU5M0EyNzk4MjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5ZWBwvAAACDklEQVR42pTVTUhUURjG8VEyLSuTCNHA3LUJdGVRIC0KoZCwdBMFFX6hOUyoUYahNdUUMY6JCgkN9iGhaGBGLYwUSbBFuMlFURYI5dKdpX38X3gGBpl7vV74gXO5973nnPc5x6RoNOrzeFXiMnZhGlcwlezx5XI8iHsxDW9xYIOHl+2ZEIZwSvc6MYmglxGcw27sQKnureAZCtYqsBFX0Y978OMV9tvL+LlWgQot2nWcwBkk4YL+7nErYAvVjEdIRSPOIoJl/ECvW4Fq7MRN3EW6hv4Vp3V/yanAZrXLQrIXE6hCGC2Yx0N70KlAHbbrK7VaxHwN21oZxG+nAlvQpODsw2sVtC60agp9sYcTFfCryB3F9zn2YBFluKEcJCyQgQZ0owgjapktYhs+42n8C6sLBNSysBL4Anma73FN4Y9TgUxcVM4PY1CjCSlIHzGwer7xBRqVsohSNoYspOCYvv430U7zKTD16EAJnqgTtzT/GQwn6ndsBE2aW6f2/jtsxTYU4xr+Oe31LPX5Nk4q+5f0uwvvMep2WAT09UL1vwZHVPgQjjp9PTYFW/HHiuwXvNRvC8yU9r/rcZWrcMwreZb5+zio4q6XjWCTHszWvQXkYBxvvByYttqzdjgoqmWa83kvx7WN4Be+qde2kb7r4JjzeTyyl9CuTrQoOCte/9tYgQ+KsB1hn3zrvP4LMAB3VHTCvmxSHwAAAABJRU5ErkJggg==)}.clearfix:after{display:block}body{padding:0;font-family:"Open Sans";max-width:1500px}header{position:relative;z-index:1}.header{-webkit-box-shadow:0 0 10px rgba(0,0,0,.5);box-shadow:0 0 10px rgba(0,0,0,.5)}.header-top{background-color:#76c7c0;min-height:80px;position:relative;z-index:2}.header-slider{position:relative;z-index:1}.logo{border-bottom:2px solid #fff;max-width:152px;padding-top:12px}.logo h1{color:#fff}.header-top__list{margin-top:11px}.header-top__list ul{list-style:none;margin-bottom:0}.header-top__list ul:after{display:block}.header-top__list ul li{float:left;margin:0 1px;display:block}.header-top__list ul li a{display:block;text-decoration:none;font-size:13px;font-weight:600;line-height:16px;color:#fff;padding:6px 18px;-webkit-transition:.2s all;transition:.2s all;border-bottom:3px solid transparent;-webkit-border-radius:5px;border-radius:5px}.header-top__list ul li a:hover{background-color:#e2534b;border-bottom:3px solid #d72c23}.header-top__list ul li.current a{height:30px;background-color:#3e9991;-webkit-border-radius:5px;border-radius:5px;border-bottom:3px solid #30746e}.header-top__list .with-sub-menu{position:relative;height:42px}.header-top__list .with-sub-menu a{position:relative;padding-left:25px}.header-top__list .with-sub-menu a:after{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAYAAAB4ka1VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg5OEEwODk4OUVDMTExRTY5MDExRkI0NjdFNEU5Q0RCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg5OEEwODk5OUVDMTExRTY5MDExRkI0NjdFNEU5Q0RCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6ODk4QTA4OTY5RUMxMTFFNjkwMTFGQjQ2N0U0RTlDREIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6ODk4QTA4OTc5RUMxMTFFNjkwMTFGQjQ2N0U0RTlDREIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5BmXWCAAAAPklEQVR42mL4//9/PRAnADEDGnYA4vUghgAQnwfi+UiSIA3vgdgAJoCsCC4JkkM2EqYILomuAKbIAFkMIMAAceyBj/WUxuwAAAAASUVORK5CYII=);width:8px;height:5px;content:"";position:absolute;left:9px;top:50%;margin-top:-1px}.header-top__list .with-sub-menu:hover>a{background-color:#e2534b;border-bottom:3px solid #d72c23}.header-top__list .with-sub-menu ul{-webkit-border-radius:5px;border-radius:5px;position:absolute;visibility:hidden;opacity:0;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);top:42px;width:200px;background:#e2534b;padding:5px 5px 0;-webkit-transition:.4s all;transition:.4s all}.header-top__list .with-sub-menu ul:before{content:'';display:block;position:absolute;height:0;width:0;border-bottom:6px solid #e2534b;border-left:6px solid transparent;border-right:6px solid transparent;top:-6px;left:12px}.header-top__list .with-sub-menu ul li{width:100%;margin:0 0 4px}.header-top__list .with-sub-menu ul li a{width:100%;background:#e5645d}.header-top__list .with-sub-menu ul li a:hover{border-bottom-color:transparent;background:#76c7c0}.header-top__list .with-sub-menu:hover ul{opacity:1;visibility:visible;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}.rotate a:after{-webkit-transform:rotate(-90deg);-ms-transform:rotate(-90deg);transform:rotate(-90deg)}.header-top__number{background-color:#528b86;-webkit-border-radius:13px;border-radius:13px;margin-top:11px;padding:3px 13px;position:relative}.header-top__number a{display:block;font-size:20px;font-weight:700;color:#fff;text-decoration:none}.header-top__call{position:absolute;top:66px;left:27px;z-index:1}.header-top__call:after{content:'';position:absolute;top:-12px;left:64px;border:6px solid transparent;border-bottom:6px solid #e2534b;-webkit-transition:.2s all;transition:.2s all}.header-top__call:hover:after{border-bottom:6px solid #e5645d}.header-top__call a{font-size:14px;font-weight:700;text-decoration:none;padding:5px 8px}.header-slider .content-slider li{background-image:url(../img/raster/header-slider.png);background-repeat:no-repeat;background-size:cover;width:1499px;height:500px}.header-slider__block{width:282px;background-color:#e2534b;-webkit-border-radius:5px;border-radius:5px;color:#fff;font-family:RoadRadio;font-weight:900;font-size:50px;text-align:center;line-height:20px;padding-top:20px;margin:161px auto;padding-bottom:5px}.header-slider__block span{font-size:18px}.header-slider .lSSlideOuter .lSPager.lSpg li a{background-color:#b0b8b9;-webkit-border-radius:0;border-radius:0;display:inline-block;height:5px;overflow:hidden;text-indent:-999em;width:60px;position:relative;z-index:99;-webkit-transition:all .5s linear 0s;transition:all .5s linear 0s}.header-slider .lSSlideOuter .lSPager.lSpg li.active a,.header-slider .lSSlideOuter .lSPager.lSpg li:focus a,.header-slider .lSSlideOuter .lSPager.lSpg li:hover a{background-color:#e2534b}.header-slider .lSSlideWrapper{-webkit-box-shadow:0 5px 24px 4px rgba(0,0,0,.2);box-shadow:0 5px 24px 4px rgba(0,0,0,.2);z-index:2}.header-slider .lSAction>.lSPrev{left:0}.header-slider .lSAction>.lSNext{right:0}.header-slider .lSAction>a{width:50px;height:60px;opacity:1;margin-top:-33px;background-position:center;background-repeat:no-repeat;background-image:none;text-align:center;line-height:70px}.header-slider .lSAction>a i{font-size:40px;color:#fff}.header-slider .lSSlideOuter .lSPager.lSpg{position:relative;background-color:#f3f3f3;padding-top:10px!important;margin-top:0!important;padding-bottom:32px}.header-slider__block2{background-color:rgba(0,0,0,.5);-webkit-border-radius:7px;border-radius:7px;max-width:948px;margin:-45px auto;text-align:center;padding:11px 0}.header-slider__block2 h1{color:#fff}.pxperfect{position:absolute;opacity:.5;top:0;left:50%;margin-left:-750px}</style>
+
+    <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+    <script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)};function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n};function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+    <!-- Load Fonts CSS Start -->
+    <script>
+        loadCSS( "css/fonts.min.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
+        // loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" ); // Loading fonts, if the site is at the root
+    </script>
+    <!-- Load Fonts CSS End -->
+
+    <!-- Load Custom CSS Start -->
+    
+    <script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+    <!-- Load Custom CSS End -->
+
+    <!-- Load Custom CSS Compiled without JS Start -->
+    <noscript>
+        <link rel="stylesheet" href="css/fonts.min.css">
+        <link rel="stylesheet" href="css/main.min.css">
+    </noscript>
+    <!-- Load Custom CSS Compiled without JS End -->
+
+    <!-- Custom Browsers Color Start -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <!-- Custom Browsers Color End -->
+
+</head>
+
+<body>
+<header>
+    <div class="header-top">
+        <div class="inner">
+            <div class="logo inline-block">
+                <h1>
+                    ФОРСАТ
+                </h1>
+            </div>
+            <div class="header-top__list inline-block">
+                <ul>
+                    <li class="current"><a href="#">О КОМПАННИИ</a></li>
+                    <li><a href="#">ЦЕНЫ</a></li>
+                    <li><a href="#">ОБЪЕКТЫ</a></li>
+                    <li class="with-sub-menu">
+                        <a href="#">ФОТОГАЛЕРЕЯ</a>
+                        <ul>
+                            <li class="rotate"><a href="#">Эпоксидные полы</a></li>
+                            <li class="rotate"><a href="#">Бетонные полы</a></li>
+                            <li class="rotate"><a href="#">Наливные полы</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">ВАКАНСИИ</a></li>
+                    <li><a href="#">НОВОСТИ</a></li>
+                    <li><a href="#">КОНТАКТЫ</a></li>
+                </ul>
+            </div>
+            <div class="header-top__number inline-block">
+                <a href="tel:8 (111) 111-11-11">
+                    8 (111) 111-11-11
+                </a>
+                <a href="tel:8 (111) 111-11-11">
+                    8 (111) 111-11-11
+                </a>
+                <div class="header-top__call">
+                    <a href="#">
+                        Заказать звонок
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-slider">
+        <ul id="header-slider" class="gallery content-slider list-unstyled clearfix">
+            <li>
+                <div class="header-slider__block">
+                    ФОРСАТ
+                    <span>промышленные полы</span>
+                </div>
+                <div class="header-slider__block2">
+                    <h1>
+                        Индивидуальный подход к каждому заказчику
+                    </h1>
+                </div>
+            </li>
+            <li>
+                <div class="header-slider__block">
+                    ФОРСАТ
+                    <span>промышленные полы</span>
+                </div>
+                <div class="header-slider__block2">
+                    <h1>
+                        Индивидуальный подход к каждому заказчику
+                    </h1>
+                </div>
+            </li>
+            <li>
+                <div class="header-slider__block">
+                    ФОРСАТ
+                    <span>промышленные полы</span>
+                </div>
+                <div class="header-slider__block2">
+                    <h1>
+                        Индивидуальный подход к каждому заказчику
+                    </h1>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<div class="news block-overall">
+    <div class="inner">
+        <div class="menu-overall inline-block">
+            <div class="menu-overall__types">
+                <div class="menu-overall__p">
+                    ТИПЫ ПОЛОВ
+                </div>
+                <ul>
+                    <li><a href="#">Бетонные полы</a></li>
+                    <li><a href="#">Наливные полы</a></li>
+                    <li><a href="#">Полимерные полы</a></li>
+                    <li><a href="#">Полимерцементные полы</a></li>
+                    <li><a href="#">Полиуретановые полы</a></li>
+                    <li><a href="#">Эпоксидные полы</a></li>
+                    <li><a href="#">Антистатические полы</a></li>
+                </ul>
+            </div>
+            <div class="menu-overall__types menu-overall__types2">
+                <div class="menu-overall__p menu-overall__p2">
+                    ТИПЫ ПОМЕЩЕНИЙ
+                </div>
+                <ul class="menu-overall__types__ul">
+                    <li><a href="#">Полы для автосервисов</a></li>
+                    <li><a href="#">Полы для гаражей</a></li>
+                    <li><a href="#">Полы для складских<br> помещений</a></li>
+                    <li><a href="#">Полы для химичекских<br> лабораторий</a></li>
+                    <li><a href="#">Полы для холодильный<br> камер</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="style-overall inline-block">
+            <h1>
+                Новости
+            </h1>
+            <div class="news-table">
+                <div class="news-table-row">
+                    <div class="news-table__left news-table__left_title news-table__left_mod">
+                        <p>Дата</p>
+                    </div>
+                    <div class="news-table__right news-table__left_title news-table__left_mod">
+                        <p>Событие</p>
+                    </div>
+                </div>
+                <div class="news-table-row">
+                    <div class="news-table__left">
+                        <p>09.11.15</p>
+                    </div>
+                    <div class="news-table__right">
+                        <p>Внимание акция!</p>
+                    </div>
+                </div>
+                <div class="news-table-row">
+                    <div class="news-table__left">
+                        <p>08.11.15</p>
+                    </div>
+                    <div class="news-table__right">
+                        <p>Устройство бетонного пола в съемочных павильонах</p>
+                    </div>
+                </div>
+                <div class="news-table-row">
+                    <div class="news-table__left">
+                        <p>08.11.15</p>
+                    </div>
+                    <div class="news-table__right">
+                        <p>Полимерное покрытие пола парковки Бизнес-центра</p>
+                    </div>
+                </div>
+                <div class="news-table-row">
+                    <div class="news-table__left">
+                        <p>06.11.15</p>
+                    </div>
+                    <div class="news-table__right">
+                        <p>Ремонт бетонного пола парковки</p>
+                    </div>
+                </div>
+                <div class="news-table-row">
+                    <div class="news-table__left">
+                        <p>06.11.15</p>
+                    </div>
+                    <div class="news-table__right">
+                        <p>Работы по устройству полов автостоянки</p>
+                    </div>
+                </div>
+                <div class="news-table-row">
+                    <div class="news-table__left">
+                        <p>04.11.15</p>
+                    </div>
+                    <div class="news-table__right">
+                        <p>Устройство полимерных антистатических полов в операционных</p>
+                    </div>
+                </div>
+                <div class="news-table-row">
+                    <div class="news-table__left news-table__left_mod">
+                        <p>03.11.15</p>
+                    </div>
+                    <div class="news-table__right news-table__left_mod">
+                        <p>Ремонтные работы полимерного покрытия в цехе по производству конфет<br>
+                            «РОТ ФРОНТ»</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slider">
+    <div class="slider-overall">
+        <div class="inner">
+            <div class="slider-overall__text inline-block">
+                Наши клиенты
+            </div>
+            <div class="slider-overall__border inline-block">
+
+            </div>
+            <div class="slider-overall__buttons inline-block">
+                <a href="#" class="slider-overall__buttons__a-left">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="slider-overall__buttons__a-right">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </div>
+            <ul id="slider-overall" class="gallery content-slider list-unstyled clearfix ">
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+                <li>
+                    <img src="img/icons/jquery.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="inner">
+        <div class="footer__item1 inline-block">
+            <h1>
+                ФОРСАТ
+            </h1>
+            <p class="p-thin">
+                ФОРСАТ занимается устройством наливных полов уже
+                четверть века, что говорит о богатом опыте и доверии
+                со стороны наших клиентов.
+            </p>
+            <p class="p-thin">
+                Телефон:<span>182 2569 5896</span><br>
+                e-mail:<span>info@forsat</span>
+            </p>
+        </div>
+        <div class="footer__item2 inline-block">
+            <p class="p-bold">Карта сайта</p>
+            <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Цены</a></li>
+                <li><a href="#">Объекты</a></li>
+                <li><a href="#">Фотогалерея</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer__item3 inline-block">
+            <p class="p-bold">последнее из <span>НОВОСТЕЙ</span></p>
+            <div class="footer__item3__content">
+                <div class="footer__item3__container">
+                    <div class="footer__item3__content__img inline-block">
+                        <img src="img/icons/img.png" alt="">
+                    </div>
+                    <div class="footer__item3__content__text inline-block">
+                        <a href="#">
+                            Отзыв от государственного космического<br>
+                            научно-производственного центра<br>
+                            <span>26 Мая, 2016</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__item3__container">
+                    <div class="footer__item3__content__img inline-block">
+                        <img src="img/icons/img.png" alt="">
+                    </div>
+                    <div class="footer__item3__content__text inline-block">
+                        <a href="#">
+                            Отзыв от государственного космического<br>
+                            научно-производственного центра<br>
+                            <span>26 Мая, 2016</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-line">
+        <div class="inner">
+            <p class="inline-block">
+                2016 Alex Kalinin|WebDesigner
+            </p>
+            <div class="footer-line__social inline-block">
+                <a href="#">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-rss" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--<div class="pxperfect">-->
+    <!--<img src="img/news.png" alt="">-->
+<!--</div>-->
+
+
+
+
+
+<script>var scr = {"scripts":[
+    {"src" : "js/libs.min.js", "async" : false},
+    {"src" : "js/common.js", "async" : false}
+]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+</script>
+</body>
+</html>
