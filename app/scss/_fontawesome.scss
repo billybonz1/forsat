@@ -1,2 +1,16 @@
 @import "fontawesome/variables";
+$fa-font-path: "../fonts/FontAwesome";
+@import "fontawesome/mixins";
+@import "fontawesome/path";
+@import "fontawesome/core";
 
+.#{$fa-css-prefix}-plus-circle:before { content: $fa-var-plus-circle; }
+.#{$fa-css-prefix}-minus-circle:before { content: $fa-var-minus-circle; }
+.#{$fa-css-prefix}-angle-double-left:before { content: $fa-var-angle-double-left; }
+.#{$fa-css-prefix}-angle-double-right:before { content: $fa-var-angle-double-right; }
+.#{$fa-css-prefix}-chevron-left:before { content: $fa-var-chevron-left; }
+.#{$fa-css-prefix}-chevron-right:before { content: $fa-var-chevron-right; }
+.#{$fa-css-prefix}-facebook:before { content: $fa-var-facebook; }
+.#{$fa-css-prefix}-twitter:before { content: $fa-var-twitter; }
+.#{$fa-css-prefix}-google-plus:before { content: $fa-var-google-plus; }
+.#{$fa-css-prefix}-rss:before { content: $fa-var-rss; }

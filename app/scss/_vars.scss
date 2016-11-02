@@ -33,3 +33,17 @@ $color2: #e2534b;
     border-left: $size solid $color;
   }
 }
+
+
+%red_button{
+  background-color: $color2;
+  border-bottom: 3px solid darken($color2, 10);
+  transition: .2s all;
+  border-radius: 6px;
+  color: white;
+}
+%red_button_hover{
+  background-color: lighten($color2,4.1);
+  border-bottom-color: $color2;
+}
+
