@@ -375,7 +375,7 @@
   vertical-align: top;
 }
 .style-overall{
-  width: 835px;
+  width: 870px;
   height: 635px;
   vertical-align: top;
   padding-left: 33px;
@@ -530,14 +530,12 @@
 .news-table__left{
   border-bottom: 1px solid #ddd;
   border-right: 1px solid #ddd;
-  height: 38.5px;
   width: 107px;
   float: left;
   background-color: #f8f8f8;
 }
 .news-table__right{
   border-bottom: 1px solid #ddd;
-  height: 38.5px;
   width: 726px;
   float: left;
   background-color: #f8f8f8;
@@ -558,8 +556,7 @@
 }
 .news-table{
   p{
-    padding-top: 10px;
-    padding-left: 22px;
+    padding: 11px 20px;
   }
 }
 
@@ -584,11 +581,11 @@
 }
 .vacancies__block__jobs{
   color: #2e2e2e;
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 700;
   border-bottom: 1px dotted #2e2e2e;
   border-width: 3px;
-  margin-top: 12px;
+  margin-top: 19px;
 }
 .vacancies__block__form{
   width: 721px;
@@ -598,7 +595,7 @@
 }
 .vacancies__block__form__box{
   height: 140px;
-  width: 97%;
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   color: #2e2e2e;

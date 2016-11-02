@@ -136,6 +136,13 @@ header{
   }
 
 }
+.rotate{
+  a{
+    &:after{
+      transform: rotate(-90deg);
+    }
+  }
+}
 .header-top__number{
   background-color: #528b86;
   border-radius: 13px;
