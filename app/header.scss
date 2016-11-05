@@ -1,7 +1,7 @@
 @import "bourbon";
 @import "scss/vars";
 @import "scss/base";
-
+@import "./libs/lightslider/dist/css/lightslider.min.css";
 //First screen styles
 body{
   padding: 0;
@@ -142,6 +142,10 @@ header{
       transform: rotate(-90deg);
     }
   }
+}
+.lSSlideOuter .lSPager, .lSSlideOuter .lightSlider {
+  padding-left: 0;
+  list-style: none;
 }
 .header-top__number{
   background-color: #528b86;
