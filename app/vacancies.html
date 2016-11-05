@@ -66,10 +66,10 @@
             </div>
             <div class="header-top__list inline-block">
                 <ul>
-                    <li class="current"><a href="#">О КОМПАННИИ</a></li>
+                    <li class="current-menu-item"><a href="#">О КОМПАННИИ</a></li>
                     <li><a href="#">ЦЕНЫ</a></li>
                     <li><a href="#">ОБЪЕКТЫ</a></li>
-                    <li class="with-sub-menu">
+                    <li class="menu-item-has-children">
                         <a href="#">ФОТОГАЛЕРЕЯ</a>
                         <ul>
                             <li class="rotate"><a href="#">Эпоксидные полы</a></li>
@@ -197,7 +197,16 @@
                     <input type="text" size="20" name="name" placeholder="Ваше имя">
                     <input type="text" size="20" name="surname" placeholder="Телефон">
                     <input type="text" size="20" name="email" placeholder="E-mail">
-                    <input type="file">
+                    <div class="file_upload">
+                        <button type="button">Приложить файл</button>
+                        <div>*</div>
+                        <input type="file">
+                    </div>
+                    <div class="sent">
+                        <button>
+                            Отправить
+                        </button>
+                    </div>
                 </div>
                 <div class="vacancies__block__form__comment inline-block">
                     <textarea name="comment" cols="25" rows="6" placeholder="Комментарий"></textarea>
