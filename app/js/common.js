@@ -12,6 +12,7 @@ $(function () {
         item: 1,
         slideMargin: 0,
         loop: true,
+        pager: false,
         prevHtml: "<i class='fa fa-angle-double-left'></i>",
         nextHtml: "<i class='fa fa-angle-double-right'></i>",
     });
