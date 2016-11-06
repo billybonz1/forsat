@@ -31,13 +31,17 @@ header{
   max-width: 152px;
   padding-top: 12px;
   vertical-align: middle;
-  h1{
+  a{
     color: white;
+    font-size: 36px;
+    font-weight: 700;
+    text-decoration: none;
   }
 }
 .header-top__list{
   vertical-align: middle;
   margin-top: 11px;
+  min-width: 820px;
   ul{
     list-style: none;
     margin-bottom: 0;
