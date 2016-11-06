@@ -7,6 +7,14 @@ $(function () {
         prevHtml: "<i class='fa fa-angle-double-left'></i>",
         nextHtml: "<i class='fa fa-angle-double-right'></i>",
     });
+    $('#stadion-slider').lightSlider({
+        adaptiveHeight: true,
+        item: 1,
+        slideMargin: 0,
+        loop: true,
+        prevHtml: "<i class='fa fa-angle-double-left'></i>",
+        nextHtml: "<i class='fa fa-angle-double-right'></i>",
+    });
     var sliderOverall = $('#slider-overall').lightSlider({
         item: 6,
         loop: false,

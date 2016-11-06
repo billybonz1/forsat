@@ -224,7 +224,6 @@
   }
 }
 .footer__item3__content__img{
-  opacity: 0.2;
   background-color: black;
   border-radius: 5px;
   width: 70px;
@@ -233,6 +232,7 @@
   margin-right: 15px;
   position: relative;
   float: left;
+  overflow: hidden;
   img{
     text-align: center;
     position: absolute;
@@ -241,6 +241,8 @@
     right: 0;
     bottom: 0;
     margin: auto;
+    width: 100%;
+    height: 100%;
   }
 }
 .footer__item3__content__text{
@@ -1116,6 +1118,47 @@
   }
 }
 
+
+.objectsraz__block{
+  h1{
+    color: #7f8c8c;
+  }
+}
+.stadion-slider{
+  li{
+    background-image: url("../img/raster/stadion.png");
+    background-repeat: no-repeat;
+    width: 834px;
+    height: 499px;
+  }
+}
+.stadion-slider__block{
+  .lSAction>.lSPrev{
+    left: 0;
+  }
+  .lSAction>.lSNext{
+    right: 3px;
+  }
+  .lSAction>a{
+    width: 50px;
+    height: 60px;
+    opacity: 1;
+    margin-top: -33px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: none;
+    text-align: center;
+    line-height: 70px;
+    @extend %red_button;
+    &:hover{
+      @extend %red_button_hover;
+    }
+    i{
+      font-size: 40px;
+      color: #fff;
+    }
+  }
+}
 
 
 
